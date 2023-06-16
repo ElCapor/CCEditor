@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCEditor", "CCEditor\CCEditor.csproj", "{44F69D59-ED97-455F-A804-3AFF8418B73B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F69D59-ED97-455F-A804-3AFF8418B73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F69D59-ED97-455F-A804-3AFF8418B73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F69D59-ED97-455F-A804-3AFF8418B73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F69D59-ED97-455F-A804-3AFF8418B73B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAEBCA69-72BB-4B54-A9E0-16058BDA8EC4}
+	EndGlobalSection
+EndGlobal
