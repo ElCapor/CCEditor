@@ -2,16 +2,20 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <LangVersion>11.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{44F69D59-ED97-455F-A804-3AFF8418B73B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CCEditor</RootNamespace>
     <AssemblyName>CCEditor</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,11 +37,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -46,12 +53,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Artificial Intelligence\AIBridgeNote.cs" />
+    <Compile Include="Classes\Artificial Intelligence\ServerRequest.cs" />
+    <Compile Include="Classes\Enums\AnimationTarget.cs" />
+    <Compile Include="Classes\Enums\OffOnAuto.cs" />
+    <Compile Include="Classes\Enums\ServerRequest.cs" />
+    <Compile Include="Classes\Master File Pieces\AISongInfo.cs" />
+    <Compile Include="Classes\Master File Pieces\BodyGuide.cs" />
+    <Compile Include="Classes\Master File Pieces\FaceAnimation.cs" />
+    <Compile Include="Classes\Master File Pieces\FileComponent.cs" />
+    <Compile Include="Classes\Master File Pieces\HeadAnimation.cs" />
+    <Compile Include="Classes\Master File Pieces\IKPassComponent.cs" />
+    <Compile Include="Classes\Master File Pieces\InitialPose.cs" />
+    <Compile Include="Classes\Master File Pieces\MasterFile.cs" />
+    <Compile Include="Classes\Master File Pieces\MasterFileMetaData.cs" />
+    <Compile Include="Classes\Master File Pieces\MecanimFile.cs" />
+    <Compile Include="Classes\Master File Pieces\MeshScore.cs" />
+    <Compile Include="Classes\Master File Pieces\MIDIScoreSync.cs" />
+    <Compile Include="Classes\Master File Pieces\MocapGlobalShifts.cs" />
+    <Compile Include="Classes\Master File Pieces\MXLScoreFile.cs" />
+    <Compile Include="Classes\Master File Pieces\NDAnimationLegacy.cs" />
+    <Compile Include="Classes\Master File Pieces\NDQTAnimation.cs" />
+    <Compile Include="Classes\Master File Pieces\NDV3Animation.cs" />
+    <Compile Include="Classes\Master File Pieces\OtherSongData.cs" />
+    <Compile Include="Classes\Master File Pieces\PerSongAdjustments.cs" />
+    <Compile Include="Classes\Master File Pieces\PlayableNotes.cs" />
+    <Compile Include="Classes\Master File Pieces\SongLyrics.cs" />
+    <Compile Include="Classes\Master File Pieces\SoundTrack.cs" />
+    <Compile Include="Classes\Master File Pieces\SVGScoreFile.cs" />
+    <Compile Include="Classes\Master File Pieces\SyntheticComponents.cs" />
+    <Compile Include="Classes\Mocap Helpers\NDCompressedLegacy.cs" />
+    <Compile Include="Classes\WAI\Array3DCompressed.cs" />
+    <Compile Include="Classes\WAI\Array3DUncompressed.cs" />
+    <Compile Include="Classes\WAI\BitArray.cs" />
+    <Compile Include="Classes\Unity\Color.cs" />
+    <Compile Include="Classes\Unity\Color32.cs" />
+    <Compile Include="Classes\WAI\CompressedAudio.cs" />
+    <Compile Include="Classes\WAI\CompressedMember.cs" />
+    <Compile Include="Classes\WAI\ComputeTransform.cs" />
+    <Compile Include="Classes\WAI\EncryptedMember.cs" />
+    <Compile Include="Classes\WAI\InspectorTRS.cs" />
+    <Compile Include="Classes\Unity\Matrix4x4.cs" />
+    <Compile Include="Classes\Unity\Quaternion.cs" />
+    <Compile Include="Classes\Unity\Ray.cs" />
+    <Compile Include="Classes\WAI\OurException.cs" />
+    <Compile Include="Classes\WAI\PackedArray.cs" />
+    <Compile Include="Classes\WAI\Shape.cs" />
+    <Compile Include="Classes\Unity\Vector2.cs" />
+    <Compile Include="Classes\Unity\Vector2Int.cs" />
+    <Compile Include="Classes\Unity\Vector3.cs" />
+    <Compile Include="Classes\Unity\Vector3Int.cs" />
+    <Compile Include="Classes\Unity\Vector4.cs" />
+    <Compile Include="Classes\WAI\LanguageTable.cs" />
+    <Compile Include="Classes\WAI\LazySerializableElement.cs" />
+    <Compile Include="Classes\WAI\LazySerializableSequence.cs" />
+    <Compile Include="Classes\WAI\RemoteConfig.cs" />
+    <Compile Include="Classes\WAI\SongsTable.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonoBehaviour.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -65,6 +129,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CC\" />
+    <Folder Include="Classes\Concert Director\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
