@@ -95,7 +95,6 @@ namespace CCEditor.Classes
             return new Color32((byte)((float)(int)a.r + (float)(b.r - a.r) * t), (byte)((float)(int)a.g + (float)(b.g - a.g) * t), (byte)((float)(int)a.b + (float)(b.b - a.b) * t), (byte)((float)(int)a.a + (float)(b.a - a.a) * t));
         }
 
-        [VisibleToOtherModules]
         internal bool InternalEquals(Color32 other)
         {
             return rgba == other.rgba;
@@ -113,7 +112,7 @@ namespace CCEditor.Classes
 
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            return UnityString.Format("RGBA({0}, {1}, {2}, {3})", new object[4]
+            return String.Format("RGBA({0}, {1}, {2}, {3})", new object[4]
             {
                 r.ToString(format, formatProvider),
                 g.ToString(format, formatProvider),

@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CC\Math\Mathf.cs" />
     <Compile Include="Classes\Artificial Intelligence\AIBridgeNote.cs" />
     <Compile Include="Classes\Artificial Intelligence\ServerRequest.cs" />
     <Compile Include="Classes\Enums\AnimationTarget.cs" />
@@ -145,7 +146,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CC\" />
     <Folder Include="Classes\Concert Director\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
