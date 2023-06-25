@@ -3,6 +3,7 @@ using CCEditor.Classes.Mocap_Helpers;
 using CCEditor.Classes.UnityEngine;
 using CCEditor.Classes.WAI;
 using CCEditor.Classes;
+using CCEditor.CC;
 using System;
 using System.Collections;
 using System.Collections.Generic;

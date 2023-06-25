@@ -55,7 +55,13 @@ namespace CCEditor
         {
             return a < b ? a : b;
         }
+        public static bool Approximately(float a, float b)
+        {
+            const float epsilon = 1e-6f; // Adjust this tolerance as per your requirements
 
+            // Check if the absolute difference between a and b is less than the tolerance
+            return Mathf.Abs(a - b) < epsilon;
+        }
         public static float Clamp(float value, float min, float max)
         {
             return value < min ? min : (value > max ? max : value);
@@ -105,6 +111,17 @@ namespace CCEditor
         {
             return Math.Abs(value);
         }
-
+        public static long RoundToLong(double d)
+        {
+            double value = Math.Round(d);
+            try
+            {
+                return Convert.ToInt64(value);
+            }
+            catch
+            {
+                throw new Exception(d.ToString());
+            }
+        }
     }
 }

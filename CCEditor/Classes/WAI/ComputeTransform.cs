@@ -26,5 +26,23 @@ namespace CCEditor.Classes
             return new ComputeTransform(position, eulerAngles, scale);
         }
 
+        public Vector3 Position
+        {
+            get { return _position; }
+            set { _position = value; }
+        }
+
+        public Vector3 Scale
+        {
+            get { return _scale; }
+            set { _scale = value; }
+        }
+
+
+        public Vector3 EulerAngles
+        {
+            get { return _eulerAngles.normalized; }
+            set { _eulerAngles = value; }
+        }
     }
 }

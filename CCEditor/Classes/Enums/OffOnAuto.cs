@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CCEditor.Classes.Enums
 {
-    internal class OffOnAuto
+    public enum OffOnAuto : byte
     {
+        off,
+        on,
+        auto
     }
+
 }

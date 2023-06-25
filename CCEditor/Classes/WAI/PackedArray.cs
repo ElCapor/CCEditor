@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace CCEditor.Classes.WAI
 {
-    internal class PackedArray
+    public class PackedArray
     {
-        private byte[] bytes;
+        public Array array;
 
-        public PackedArray(byte[] bytes)
+        public PackedArray()
         {
-            this.bytes = bytes;
+        }
+
+        public PackedArray(Array arr)
+        {
+            array = arr;
         }
     }
 }

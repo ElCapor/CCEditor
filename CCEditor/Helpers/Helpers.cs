@@ -17,5 +17,9 @@ namespace CCEditor.Helpers
             }
             return ~num;
         }
+        public static string NewLineJoin<T>(IEnumerable<T> ie)
+        {
+            return string.Join("\n", ie);
+        }
     }
 }

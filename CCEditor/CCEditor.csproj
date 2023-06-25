@@ -53,12 +53,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CC\Attributes\CompressibleAttribute.cs" />
+    <Compile Include="CC\Attributes\EncryptableAttribute.cs" />
+    <Compile Include="CC\Attributes\SerializeByIDAttribute.cs" />
+    <Compile Include="CC\BinaryReader1.cs" />
+    <Compile Include="CC\BinaryReader2.cs" />
+    <Compile Include="CC\BinaryWriter1.cs" />
+    <Compile Include="CC\BinaryWriter2.cs" />
+    <Compile Include="CC\DataEncoder.cs" />
+    <Compile Include="CC\Extensions\ExtensionMethods.cs" />
+    <Compile Include="CC\Interfaces\IPostDeserializeByID.cs" />
+    <Compile Include="CC\Interfaces\IPreDeserializeByID.cs" />
+    <Compile Include="CC\Interfaces\IPreSerializeByID.cs" />
+    <Compile Include="CC\Interfaces\ISelfSerializable.cs" />
     <Compile Include="CC\Math\Mathf.cs" />
+    <Compile Include="CC\ObjectReader.cs" />
+    <Compile Include="CC\ObjectWriter.cs" />
+    <Compile Include="CC\SerializeManager.cs" />
+    <Compile Include="CC\StringConverter.cs" />
     <Compile Include="Classes\Artificial Intelligence\AIBridgeNote.cs" />
     <Compile Include="Classes\Artificial Intelligence\ServerRequest.cs" />
     <Compile Include="Classes\Enums\AnimationTarget.cs" />
     <Compile Include="Classes\Enums\OffOnAuto.cs" />
-    <Compile Include="Classes\Enums\ServerRequest.cs" />
     <Compile Include="Classes\Master File Pieces\AISongInfo.cs" />
     <Compile Include="Classes\Master File Pieces\BodyGuide.cs" />
     <Compile Include="Classes\Master File Pieces\FaceAnimation.cs" />
@@ -107,8 +123,6 @@
     <Compile Include="Classes\Unity\Vector3Int.cs" />
     <Compile Include="Classes\Unity\Vector4.cs" />
     <Compile Include="Classes\WAI\LanguageTable.cs" />
-    <Compile Include="Classes\WAI\LazySerializableElement.cs" />
-    <Compile Include="Classes\WAI\LazySerializableSequence.cs" />
     <Compile Include="Classes\WAI\RemoteConfig.cs" />
     <Compile Include="Classes\WAI\SongsTable.cs" />
     <Compile Include="Form1.cs">
@@ -117,6 +131,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ArrayHelpers.cs" />
+    <Compile Include="Helpers\Helpers.cs" />
+    <Compile Include="Helpers\StaticVariables.cs" />
     <Compile Include="MonoBehaviour.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,7 +6,31 @@ using System.Threading.Tasks;
 
 namespace CCEditor.Classes.Master_File_Pieces
 {
-    internal class FileComponent
+    public class FileComponent
     {
+        protected bool CanLoad
+        {
+            get
+            {
+                
+                return true;
+            }
+        }
+
+        public virtual int SortOrder => 0;
+
+        public virtual void WillDestroy()
+        {
+        }
+
+        public virtual void UpdateFromInspector()
+        {
+        }
+
+        public override string ToString()
+        {
+            return GetType().ToString();
+        }
     }
+
 }
