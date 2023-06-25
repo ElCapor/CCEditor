@@ -84,6 +84,7 @@
     <Compile Include="Classes\Master File Pieces\SVGScoreFile.cs" />
     <Compile Include="Classes\Master File Pieces\SyntheticComponents.cs" />
     <Compile Include="Classes\Mocap Helpers\NDCompressedLegacy.cs" />
+    <Compile Include="Classes\Range.cs" />
     <Compile Include="Classes\WAI\Array3DCompressed.cs" />
     <Compile Include="Classes\WAI\Array3DUncompressed.cs" />
     <Compile Include="Classes\WAI\BitArray.cs" />
@@ -119,6 +120,10 @@
     <Compile Include="MonoBehaviour.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionData\LazySerializableElement.cs" />
+    <Compile Include="ReflectionData\LazySerializableSequence.cs" />
+    <Compile Include="ReflectionData\ReflectionHelpers.cs" />
+    <Compile Include="ReflectionData\TypeIDs.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,5 +8,11 @@ namespace CCEditor.Classes.WAI
 {
     internal class PackedArray
     {
+        private byte[] bytes;
+
+        public PackedArray(byte[] bytes)
+        {
+            this.bytes = bytes;
+        }
     }
 }

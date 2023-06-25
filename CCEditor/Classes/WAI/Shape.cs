@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CCEditor.Classes
 {
-    internal class Shape
-    {
-    }
+   
+       public class Shape
+       {
+        public int[] data;
+        public Shape() { }
+        public Shape(int[] bytes) { this.data = bytes; }
+       }
+
 }

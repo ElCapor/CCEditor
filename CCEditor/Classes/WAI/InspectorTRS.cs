@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace CCEditor.Classes
 {
-    internal class InspectorTRS
+    [Serializable]
+    public struct InspectorTRS
     {
+        public string name;
+
+        public Vector3 position;
+
+        public Vector3 eulerAngles;
+
+        public Vector3 scale;
     }
 }

@@ -8,5 +8,8 @@ namespace CCEditor.Classes.Master_File_Pieces
 {
     internal class PerSongAdjustments
     {
+        internal class MarkerAdjustment
+        {
+        }
     }
 }
